@@ -1,0 +1,9 @@
+.venv/
+.venv-1/
+.venv312/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.env
+qa_db/
+chroma_db/
