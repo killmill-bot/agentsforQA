@@ -7,3 +7,6 @@ __pycache__/
 .env
 qa_db/
 chroma_db/
+python_code.txt
+
+GOOGLE_API_KEY=DE_NIEUWE_KEY.txt
