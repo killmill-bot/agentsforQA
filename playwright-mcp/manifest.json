@@ -1,0 +1,55 @@
+{
+  "manifest_version": "0.4",
+  "name": "playwright-mcp",
+  "display_name": "Playwright MCP",
+  "version": "1.0.2",
+  "description": "A Playwright MCP server for browser automation.",
+  "author": {
+    "name": "KillMill"
+  },
+  "server": {
+    "type": "uv",
+    "entry_point": "playwright_mcp.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${__dirname}",
+        "playwright_mcp.py"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "navigate",
+      "description": "Navigate the browser to a URL."
+    },
+    {
+      "name": "click",
+      "description": "Click an element using a CSS selector."
+    },
+    {
+      "name": "fill",
+      "description": "Fill an input field on the current page."
+    },
+    {
+      "name": "evaluate_js",
+      "description": "Execute JavaScript in the current browser page."
+    },
+
+    {
+      "name": "get_text",
+      "description": "Get visible text content from the current page."
+    },
+    {
+      "name": "get_current_url",
+      "description": "Return the current page URL."
+    },
+    {
+      "name": "get_page_title",
+      "description": "Return the title of the current page."
+    }
+   ],
+  "license": "MIT"
+}

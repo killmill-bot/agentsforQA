@@ -1,0 +1,50 @@
+{
+  "manifest_version": "0.4",
+  "name": "simple-calculator",
+  "display_name": "simple-calculator",
+  "version": "1.0.0",
+  "description": "A simple calculator MCP server for performing basic arithmetic operations.",
+  "author": {
+    "name": "KillMill"
+  },
+  "server": {
+    "type": "uv",
+    "entry_point": "simple_calculator.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${__dirname}",
+        "simple_calculator.py"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "add",
+      "description": "Add two numbers"
+    },
+    {
+      "name": "subtract",
+      "description": "Subtract the second number from the first number"
+    },
+    {
+      "name": "multiply",
+      "description": "Multiply two numbers"
+    },
+    {
+      "name": "divide",
+      "description": "Divide the first number by the second number"
+    }
+  ],
+  "license": "MIT",
+  "compatibility": {
+    "platforms": [
+      "win32"
+    ],
+    "runtimes": {
+      "python": ">=3.12,<4"
+    }
+  }
+}

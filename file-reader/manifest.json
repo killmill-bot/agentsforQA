@@ -1,0 +1,53 @@
+{
+  "manifest_version": "0.4",
+  "name": "file-reader",
+  "display_name": "File Reader",
+  "version": "1.0.0",
+  "description": "A local MCP server for listing and reading files from a configured directory.",
+  "author": {
+    "name": "KillMill"
+  },
+  "server": {
+    "type": "uv",
+    "entry_point": "file_reader.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${__dirname}",
+        "file_reader.py"
+      ],
+      "env": {
+        "FILE_READER_DIRECTORY": "${user_config.file_reader_directory}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "read_file",
+      "description": "Read the contents of a file from the configured directory."
+    },
+    {
+      "name": "list_files",
+      "description": "List all files in the configured directory."
+    }
+  ],
+  "user_config": {
+    "file_reader_directory": {
+      "type": "directory",
+      "title": "File Reader Directory",
+      "description": "Directory that the File Reader is allowed to access.",
+      "required": true
+    }
+  },
+  "license": "MIT",
+  "compatibility": {
+    "platforms": [
+      "win32"
+    ],
+    "runtimes": {
+      "python": ">=3.12,<4"
+    }
+  }
+}

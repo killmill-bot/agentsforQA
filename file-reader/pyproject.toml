@@ -1,0 +1,8 @@
+[project]
+name = "file-reader"
+version = "1.0.0"
+description = "A local file system reader MCP server"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp<2"
+]
