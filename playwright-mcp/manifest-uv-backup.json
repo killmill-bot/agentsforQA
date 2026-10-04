@@ -7,19 +7,19 @@
   "author": {
     "name": "KillMill"
   },
-"server": {
-  "type": "node",
-  "entry_point": "docker",
-  "mcp_config": {
-    "command": "docker",
-    "args": [
-      "run",
-      "--rm",
-      "-i",
-      "playwright-mcp"
-    ]
-  }
-},
+  "server": {
+    "type": "uv",
+    "entry_point": "playwright_mcp.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${__dirname}",
+        "playwright_mcp.py"
+      ]
+    }
+  },
   "tools": [
     {
       "name": "navigate",

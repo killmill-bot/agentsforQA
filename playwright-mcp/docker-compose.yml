@@ -1,0 +1,14 @@
+services:
+  playwright-mcp:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    container_name: playwright-mcp
+    restart: unless-stopped
+    environment:
+  PLAYWRIGHT_HEADLESS: "true"
+  PYTHONUNBUFFERED: "1"
+  FASTMCP_HOST: "0.0.0.0"
+  FASTMCP_PORT: "8000"
+  MCP_TRANSPORT: "streamable-http"
